@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>МосПакет</title>
+  <link type="image/png" sizes="16x16" rel="icon" href="photo/favicon.png">
+  <style type="text/css">/*#24c7d6  -желтый цвет*/
+  
+   .space { 
+    padding: 8px; /* Поля */
+    background: #fddde6; /* Цвет фона */
+    border: 2px  ; /* Параметры рамки */
+	margin-top: 10px;
+	margin-left: 90px;
+	margin-right:90px;
+	font-size: 20px;
+	font-family: Georgia
+   }
+      .a2 { 
+    padding: 8px; /* Поля */
+    background: #fddde6; /* Цвет фона */
+    border: 2px ; /* Параметры рамки #009999*/
+	margin-top: 10px;
+	margin-left: 90px;	
+	width:300px;
+	float:left;
+	font-size: 20px;
+	font-family:Century gothic
+   }
+         .a3 { 
+    padding: 8px; /* Поля */
+    background: #fff0f5; /* Цвет фона */
+    border: 2px; /* Параметры рамки */
+	margin-top: 10px;
+	margin-right: 90px;
+	width:685px;
+	float:right;
+	font-family:Tahoma;
+	font-size: 20px;
+   }
+         .a4{
+             float:right;
+             text-align='bottom';
+             font-size: 30px;
+             margin-left: 30px;
+         }
+
+      .style_paket{
+          padding: 8px; /* Поля */
+          background:  #fcf6f0; /* Цвет фона */
+          border: 2px; /* Параметры рамки */
+          margin-top: 10px;
+          margin-right: 90px;
+          width:685px;
+          height:130px;
+          float:right;
+          font-family:Courier New;
+          font-size: 20px;
+      }
+
+   li {
+    list-style-type: none; /* Убираем маркеры */
+   }
+   ul {
+    margin-left: 0; /* Отступ слева в браузере IE и Opera */
+    padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+   }
+      textarea {
+          resize: none;
+      }
+   
+  
+   </style>
+ </head>
+ <body bgcolor="white"> <!--#fff44f-->
+ <form method="POST" action="">
+   <p>
+       <a href="http://localhost/tipar/tipar.php"><center><img src="photo/mospaket.png" alt="MosPaket"></center> </a>
+ <div class="space">
+         Заказать обратный звонок <input type="text" size="40" name="phone"> <button name="button_phone">Заказать</button>
+     </div>
+     <div class="a2">
+         <ul>
+             <li><a href=paketi.php>Каталог пакетов</a></li>
+             <li><a href=novosti.php>Новости</a></li>
+             <li><a href=environment.php>Мы и окружающая среда</a></li>
+             <li><a href=opt.php>Информация для оптовиков</a></li>
+             <?php
+             if (isset($_COOKIE["cookie_id"]))
+             {
+
+                 echo "<li><a href=lk.php>Личный кабинет</a></li>";
+             }
+             else{
+                 echo"<li> <a href=log_in.php>Войти </a>/<a href=register.php>Зарегистрироваться</a></li>";
+             }
+             ?>
+
+
+             <li><a href=contacts.php>Контакты</a></li>
+         </ul>
+     </div>
